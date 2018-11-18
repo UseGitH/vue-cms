@@ -37,6 +37,7 @@
 <style lang="less" scoped>
 .app_container {
   padding-top: 40px;
+  padding-bottom: 55px;
   overflow-x: hidden;
 }
 
