@@ -4,14 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-//  导入所需 mint-ui  组件
-import { Header, Swipe, SwipeItem, Button } from "mint-ui"
-//  导入mint-ui样式文件
+// //  导入所需 mint-ui  组件
+// import { Header, Swipe, SwipeItem, Button, Lazyload } from "mint-ui"
+// //  导入mint-ui样式文件
+// import "mint-ui/lib/style.css"
+// Vue.component(Header.name, Header)
+// Vue.component(Swipe.name, Swipe)
+// Vue.component(SwipeItem.name, SwipeItem)
+// Vue.component(Button.name, Button)
+// Vue.use(Lazyload)
+import MintUi from "mint-ui"
 import "mint-ui/lib/style.css"
-Vue.component(Header.name, Header)
-Vue.component(Swipe.name, Swipe)
-Vue.component(SwipeItem.name, SwipeItem)
-Vue.component(Button.name, Button)
+Vue.use(MintUi)
 
 //  导入 MUI 组件库
 import "../lib/mui/css/mui.min.css"
@@ -21,11 +25,17 @@ import "../lib/mui/fonts/mui-icons-extra.ttf"
 
 Vue.config.productionTip = false
 
+// 导入 图片预览功能 插件
+import VuePreview from 'vue-preview'
+// import "./css/globle.css"
+Vue.use(VuePreview)
+
 
 // 导入 vue-router 
 import VueResource from "vue-resource"
 Vue.use(VueResource)
 Vue.http.options.root = 'http://localhost:5000';
+Vue.http.options.emulateJSON = true;
 
 // 定义全局的时间格式过滤器
 import moment from "moment"

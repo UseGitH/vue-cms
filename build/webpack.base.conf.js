@@ -76,6 +76,10 @@ module.exports = {
       {
         test: /\.less$/,
         use: ["style-loader", "css-loader", "less-loader"]
+      },
+      {
+        test: /vue-preview.src.*?js$/,
+        loader: 'babel-loader'
       }
     ]
   },
