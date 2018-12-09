@@ -13,6 +13,9 @@ import newsinfo from "../components/NewsInfo.vue"
 import PhotoList from "../components/PhotoList.vue"
 import PhotoInfo from "../components/PhotoInfo.vue"
 import GoodList from "../components/GoodList.vue"
+import GoodInfo from "../components/GoodInfo.vue"
+import GoodDesc from "../components/GoodDesc.vue"
+import GoodComments from "../components/GoodComments.vue"
 
 export default new Router({
     routes: [
@@ -25,7 +28,11 @@ export default new Router({
         { path: "/home/newsinfo/:id", component: newsinfo },
         { path: "/home/photolist", component: PhotoList },
         { path: "/home/photoinfo/:id", component: PhotoInfo },
-        { path: "/home/goodlist", component: GoodList }
+        { path: "/home/goodlist", component: GoodList },
+        { path: "/home/goodinfo/:id", component: GoodInfo, name: "goodinfo" },
+        { path: "/home/gooddesc/:id", component: GoodDesc, name: "gooddesc" },
+        { path: "/home/goodcomments/:id", component: GoodComments, name: "goodcomments" }
+
     ],
     linkActiveClass: "mui-active"
 })

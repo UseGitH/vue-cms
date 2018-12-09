@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .photoInfo_container {
   padding: 0 10px;
   h1 {
@@ -77,10 +77,12 @@ export default {
   }
   .my-gallery figure {
     margin: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     box-shadow: 0 0 10px #ccc;
   }
   .my-gallery figure img {
-    width: 100px !important;
+    width: 100px;
     vertical-align: middle;
   }
 }

@@ -1,11 +1,7 @@
 <template>
     <div>
       <!-- 轮播图 模块 -->
-        <mt-swipe :auto="1000">
-            <mt-swipe-item v-for="item in LoopPic" :key="item.img">
-              <img :src="item.img" alt="">
-            </mt-swipe-item>
-        </mt-swipe>
+       <swiper :lunbotulist="LoopPic" :isfull="true"></swiper>
 
       <!-- 分类列表 -->
       <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -39,6 +35,7 @@
 
 <script>
 import { Toast } from "mint-ui";
+import swiper from "./common/lunbotuList";
 export default {
   data() {
     return {
@@ -58,29 +55,14 @@ export default {
         }
       });
     }
+  },
+  components: {
+    swiper
   }
 };
 </script>
 
 <style scoped lang="less">
-.mint-swipe {
-  height: 200px;
-  .mint-swipe-item {
-    &:nth-of-type(1) {
-      background-color: red;
-    }
-    &:nth-of-type(2) {
-      background-color: green;
-    }
-    &:nth-of-type(3) {
-      background-color: blue;
-    }
-  }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-}
 .mui-table-view {
   background-color: #fff;
   border: none;
